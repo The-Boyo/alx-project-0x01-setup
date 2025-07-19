@@ -1,11 +1,12 @@
-import React from 'react'
+import Header from "@/components/layout/Header";
 
 const Users = () => {
-  return (
-    <div>
-      Users
-    </div>
-  )
-}
+	return (
+		<div>
+			<Header />
+			Users
+		</div>
+	);
+};
 
-export default Users
+export default Users;

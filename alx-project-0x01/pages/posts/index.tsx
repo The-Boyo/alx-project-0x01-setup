@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Header from "@/components/layout/Header";
 
 const Posts = () => {
-  return (
-    <div>
-      Posts
-    </div>
-  )
-}
+	return (
+		<div>
+			<Header />
+			Posts
+		</div>
+	);
+};
 
-export default Posts
+export default Posts;
