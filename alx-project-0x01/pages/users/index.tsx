@@ -2,12 +2,18 @@ import { useState } from "react";
 
 import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
-import { UserProps } from "@/interfaces";
+import { UserProps, UserData } from "@/interfaces";
 import UserModal from "@/components/common/UserModal";
 
 const Users: React.FC<UserProps[]> = ({ users }) => {
 	const [isModalOpen, setModalOpen] = useState(false);
-	const handleAddUser = () => {};
+	const [theUsers, setUsers] = useState(users);
+
+	const handleAddUser = (newUser: UserData) => {
+		setUsers((prev: UserProps[]) => [...prev, newUser]);
+	};
+
+	console.log(theUsers);
 
 	return (
 		<div className="flex flex-col h-screen">
